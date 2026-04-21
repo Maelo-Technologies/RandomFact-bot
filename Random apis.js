@@ -1,0 +1,20 @@
+{ name: '', url: 'https://uselessfacts.jsph.pl/random.json?language=en', path: (data) => data.text },
+{ name: '', url: 'https://api.adviceslip.com/advice', path: (data) => data.slip.advice },
+{ name: '', url: 'https://catfact.ninja/fact', path: (data) => data.fact },
+{ name: '', url: 'https://www.boredapi.com/api/activity', path: (data) => data.activity },
+{ name: '', url: 'http://numbersapi.com/random/trivia?json', path: (data) => data.text },
+{ name: '', url: 'https://dog-api.kinduff.com/api/facts', path: (data) => data.facts[0] },
+{ name: '', url: 'https://f-api.ir/api/facts/random', path: (data) => data.fact },
+{ name: '', url: 'https://api.dev-quotes.com/codes/random', path: (data) => `"${data.quote}" - ${data.author}`},
+{ name: '', url: 'https://corporatebs-generator.sameerkumar.website/', path: (data) => data.phrase},
+{ name: '', url: 'https://api.wheretheiss.at/v1/satellites/25544', path: (data) => `The ISS is currently zooming at ${Math.round(data.velocity)} km/h over ${data.visibility} territory.`},
+{ name: '', url: 'https://api.spaceflightnewsapi.net/v4/articles/?limit=1', path: (data) => data.results[0].title},
+{ name: '', url: 'https://en.wikipedia.org/api/rest_v1/page/random/summary', path: (data) => `${data.title}: ${data.extract}`},
+{ name: '', url: 'https://evilinsult.com/generate_insult.php?lang=en&type=json', path: (data) => data.insult},
+{ name: '', url: 'https://api.spaceflightnewsapi.net/v4/articles/?limit=1&offset=' + Math.floor(Math.random() * 100), path: (data) => data.results[0].summary},
+{ name: '', url: 'https://images-api.nasa.gov/search?q=anomaly', 
+        const item = data.collection.items[0];
+        return { text: item.data[0].description, image: item.links[0].href };
+{ name: '', url: 'https://api.thecatapi.com/v1/images/search', path: (data) => `SYSTEM_RECOVERY_FAILURE: Sector ${Math.floor(Math.random() * 9999)} contains unreadable biological data.`},
+{ name: '', url: 'http://numbersapi.com/random/year?json', path: (data) => `In the year ${data.number}: ${data.text}.`},
+}
